@@ -5,13 +5,14 @@ The popular [Quip app](https://quip.com/) is great for note-taking and documents
 
 ## Installation
 1. `brew update && brew install node`
-1. `brew install yarn`
-1. `yarn install`
+2. `brew install yarn`
+3. `yarn install`
 
 ## Use
 1. Generate a personal access token for the Quip API here: https://quip.com/api/personal-token
-1. Run `node index.js '<token>'`
-1. This will dump all your documents into an `output/` folder
+2. Run `node index.js '<token>'`
+3. This will dump all your documents in .docx format into an `output/` folder
+4. You can now directly import output folder to your Google Drive
 
 ## License
 Copyright 2017 Ben Makuh
