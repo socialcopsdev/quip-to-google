@@ -2,6 +2,7 @@ const axios = require('axios')
 const { curry, forEach } = require('lodash')
 const fs = require('fs')
 const toMarkdown = require('to-markdown')
+const HtmlDocx = require('html-docx-js');
 
 const headers = { Authorization: `Bearer ${process.argv[2]}` }
 const fetch = (url, opts = {}) =>
@@ -58,16 +59,22 @@ const writeFiles = curry((folderName, { data }) => {
     const file = thread.title.replace(/\//g, '')
     const fileName = `${folderName}/${file}`
 
-    fs.writeFile(`${fileName}.html`, html, (err) => {
-      if (err) return logErr(`❌ Failed to save ${fileName}.html. ${err}`)
+    // fs.writeFile(`${fileName}.html`, html, (err) => {
+    //   if (err) return logErr(`❌ Failed to save ${fileName}.html. ${err}`)
 
-      console.log(`✅ ${fileName}.html saved successfully`)
-    })
+    //   console.log(`✅ ${fileName}.html saved successfully`)
+    // })
 
-    fs.writeFile(`${fileName}.md`, toMarkdown(html), (err) => {
-      if (err) return logErr(`❌ Failed to save ${fileName}.md. ${err}`)
+    // fs.writeFile(`${fileName}.md`, toMarkdown(html), (err) => {
+    //   if (err) return logErr(`❌ Failed to save ${fileName}.md. ${err}`)
 
-      console.log(`✅ ${fileName}.md saved successfully`)
+    //   console.log(`✅ ${fileName}.md saved successfully`)
+    // })
+
+    fs.writeFile(`${fileName}.docx`, HtmlDocx.asBlob(html), (err) => {
+      if (err) return logErr(`❌ Failed to save ${fileName}.docx. ${err}`)
+
+      console.log(`✅ ${fileName}.docx saved successfully`)
     })
   }))
 })
