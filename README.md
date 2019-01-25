@@ -1,7 +1,7 @@
 # Quip Mass Exporter
 
 ## What is this?
-The popular [Quip app](https://quip.com/) is great for note-taking and documents, but only allows you to export your documents one by one. This tool hooks into their API and allows you to export all of your documents at once into Markdown and HTML.
+The popular [Quip app](https://quip.com/) is great for note-taking and documents, but only allows you to export your documents one by one. This tool hooks into their API and allows you to export all of your documents at once into Docx.
 
 ## Installation
 1. `brew update && brew install node`
