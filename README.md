@@ -9,7 +9,7 @@ The popular [Quip app](https://quip.com/) is great for note-taking and documents
 
 ## Use
 1. Generate a personal access token for the Quip API here: https://quip.com/api/personal-token
-2. Clone the repo: `git clone https://github.com/socialcopsdev/quip-to-google.git`
+2. Clone the repo: `git clone git@github.com:socialcopsdev/quip-to-google.git`
 3. Run `cd quip-to-google`
 4. Run `npm install`
 4. Run `node index.js '<quip-token>'`
