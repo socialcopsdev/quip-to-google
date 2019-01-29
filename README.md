@@ -9,12 +9,13 @@ The popular [Quip app](https://quip.com/) is great for note-taking and documents
 
 ## Use
 1. Generate a personal access token for the Quip API here: https://quip.com/api/personal-token
-2. Clone the repo: `git clone git@github.com:socialcopsdev/quip-to-google.git`
-3. Run `cd quip-to-google`
-4. Run `npm install`
-4. Run `node index.js '<quip-token>'`
-5. This will dump all your documents in .docx format into an `output/` folder
-6. You can now directly import output folder to your Google Drive
+2. Open terminal.
+3. Clone the repo: `git clone git@github.com:socialcopsdev/quip-to-google.git`
+4. Run `cd quip-to-google`
+5. Run `npm install`
+6. Run `node index.js '<quip-token>'`
+7. This will dump all your documents in .docx format into an `output/` folder
+8. You can now directly import output folder to your Google Drive
 
 ## License
 Copyright 2017 Ben Makuh
